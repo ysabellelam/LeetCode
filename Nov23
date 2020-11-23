@@ -7,3 +7,10 @@ from person a left join Address b on a.PersonId = b.PersonId
 select email from Person 
 group by Email
 having count(Email) > 1
+
+
+# Write your MySQL query statement below
+select a.Name as Customers from 
+Customers a left join Orders b 
+on a.Id = b.CustomerId
+where b.Id is null 
