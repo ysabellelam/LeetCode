@@ -4,4 +4,6 @@ from person a left join Address b on a.PersonId = b.PersonId
 
 
 # Find duplicates
-select email from Person having count(Email) > 1
+select email from Person 
+group by Email
+having count(Email) > 1
